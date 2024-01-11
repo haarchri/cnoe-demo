@@ -15,5 +15,5 @@ spec:
   crossplane:
     version: ">=v1.14.1-0"
   dependsOn:
-    - provider: xpkg.upbound.io/upbound/platform-ref-aws-cnoe
+    - configuration: xpkg.upbound.io/upbound/platform-ref-aws-cnoe
       version: v0.1.0
