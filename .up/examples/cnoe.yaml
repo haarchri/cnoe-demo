@@ -13,7 +13,7 @@ spec:
     iam:
       roleArn: arn:aws:iam::609897127049:role/AWSReservedSSO_AdministratorAccess_d703c73ed340fde7
     nodes:
-      count: 3
+      count: 6
       instanceType: t3.small
     gitops:
       git:
