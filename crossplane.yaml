@@ -16,4 +16,4 @@ spec:
     version: ">=v1.14.1-0"
   dependsOn:
     - configuration: xpkg.upbound.io/upbound/platform-ref-aws-cnoe
-      version: v0.1.0
+      version: v0.2.0
