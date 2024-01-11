@@ -1,0 +1,25 @@
+apiVersion: aws.platformref.upbound.io/v1alpha1
+kind: CNOE
+metadata:
+  name: platform-ref-aws-cnoe
+  namespace: default
+spec:
+  compositeDeletePolicy: Foreground
+  parameters:
+    id: platform-ref-aws-cnoe
+    region: us-west-2
+    version: "1.27"
+    route53zoneId: Z0115025YFQ7ZQF6BJ6N
+    iam:
+      roleArn: arn:aws:iam::609897127049:role/AWSReservedSSO_AdministratorAccess_d703c73ed340fde7
+    nodes:
+      count: 3
+      instanceType: t3.small
+    gitops:
+      git:
+        url: https://github.com/upbound/platform-ref-aws-cnoe.git
+        path: platform-ref-aws-cnoe/infrastructure.yaml
+        ref:
+          name: HEAD
+  writeConnectionSecretToRef:
+    name: platform-ref-aws-cnoe-kubeconfig
